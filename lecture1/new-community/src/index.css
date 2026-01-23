@@ -1,0 +1,106 @@
+/* CSS 초기화 */
+* {
+  box-sizing: border-box;
+}
+
+/* HTML, Body 초기화 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Root 앱 컨테이너 설정 */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0A0A0A;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #D5BEE1;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #C9A868;
+}
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(17, 17, 17, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(213, 190, 225, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(213, 190, 225, 0.5);
+}
+
+/* 글리치 효과용 애니메이션 */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 #D5BEE1, -2px 0 #C9A868;
+  }
+  25% {
+    text-shadow: -2px 0 #D5BEE1, 2px 0 #C9A868;
+  }
+  50% {
+    text-shadow: 2px 0 #C9A868, -2px 0 #D5BEE1;
+  }
+  75% {
+    text-shadow: -2px 0 #C9A868, 2px 0 #D5BEE1;
+  }
+  100% {
+    text-shadow: 2px 0 #D5BEE1, -2px 0 #C9A868;
+  }
+}
+
+.glitch-text {
+  animation: glitch 0.3s ease-in-out infinite;
+}
+
+/* 우주 배경 애니메이션 */
+@keyframes starMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+/* 지문인식 버튼 효과 */
+@keyframes fingerprint-scan {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
